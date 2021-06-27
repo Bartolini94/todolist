@@ -1,18 +1,6 @@
 {
-    const tasks = [
-        {
-            content: "zadanie niewykonane",
-            done: false,
-        },
-        {
-            content: "zadanie wykonane",
-            done: true,
-        },
-        {
-            content: "zadanie do usunięcia",
-            done: true,
-        },
-    ];
+    const tasks = []
+    ;
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
