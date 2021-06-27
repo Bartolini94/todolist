@@ -8,6 +8,10 @@
             content: "zadanie wykonane",
             done: true,
         },
+        {
+            content: "zadanie do usunięcia",
+            done: true,
+        },
     ];
 
     const addNewTask = (newTaskContent) => {
@@ -52,11 +56,13 @@
         for (const task of tasks) {
             htmlString += `
             <li
-                ${task.done ? " style=\"text-decoration: line-through\"" : ""}
-            >
-                ${task.content}
-                <button class="js-done">zrobione</button>
-                <button class="js-remove">usuń</button>
+                class="tasks__item js-task"
+                >
+                <button class="tasks__button tasks__button--toggleDone js-done">
+                ${task.done ? "✔️" : ""}   
+                </button>      
+                <span class="tasks__content${task.done ? " tasks__content--done" : ""}">${task.content}</span>
+                <button class="tasks__button tasks__button--remove js-remove">❌</button>
            </li> 
             `;
         }
